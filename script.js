@@ -194,17 +194,22 @@ function renderPagination()
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    renderPagination();
-    document.querySelector('.prev').addEventListener('click', goToPreviousPage);
-    document.querySelector('.next').addEventListener('click', goToNextPage);
-});
+function changeColour()
+{
+    let element = document.getElementById('is-the-dot');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const myElement = document.getElementById('is-the-dot');
-    
-    myElement.addEventListener('animationiteration', () => {
-        let blue = Math.floor(Math.random()*256);
-        myElement.style.backgroundColor = 'rgb(0, 0, ${blue})';
-    });
-});
+    if (element != null & changeColourIteration % 2 == 0)
+    {
+        let r = Math.floor(Math.random()*256);
+        let g = Math.floor(Math.random()*256);
+        let b = Math.floor(Math.random()*256);
+
+        let colour = `rgb(${r}, ${g}, ${b})`;
+
+        element.style.backgroundColor = colour;
+    }
+    changeColourIteration++;
+}
+
+let changeColourIteration = 0;
+document.addEventListener('animationiteration', changeColour);
