@@ -150,7 +150,7 @@ function printTextarea() {
     }, 1000); // Adjust the delay if necessary
 }
 
-let pageNames = ["index", "tabler", "scripter", "former", "animetioner", "dom-activity-1"];
+let pageNames = ["index", "tabler", "scripter", "former", "animetioner", "dom-activity-1", 'layoutit'];
 let currentPageIndex = 0;
 
 function goToNextPage() 
