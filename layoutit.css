@@ -1,61 +1,42 @@
 .container {  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 0.3fr 2.4fr 0.3fr;
+    grid-template-rows: 0.3fr 2fr 0.3fr;
+    grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nav nav nav"
-      "con con con"
-      "foo foo foo";
+        "nav nav nav"
+        "thi con scr"
+        "foo foo foo";
 }
   
 .nav { 
     grid-area: nav; 
-    position: sticky;
+    background-color: rgb(138, 133, 80);
 }
   
 .foo { 
     grid-area: foo; 
-    position: sticky;
-}
-  
-.con {  
-    display: grid;
-    grid-template-columns: 1.7fr 0.3fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "h18 scr"
-      "h19 scr"
-      "h20 scr"
-      "h21 scr";
-    grid-area: con;
+    background-color: rgb(138, 133, 80);
 }
   
 .scr { 
     grid-area: scr; 
+    background-color: cornflowerblue;
 }
   
-.h21 { 
-    grid-area: h21; 
+.thi { 
+    grid-area: thi; 
+    background-color: cornflowerblue;
 }
   
-.h20 { 
-    grid-area: h20; 
+.con {
+    grid-area: con; 
+    background-color: black;
 }
   
-.h19 { 
-    grid-area: h19; 
-}
-  
-.h18 { 
-    grid-area: h18; 
-}
-  
-  
-html, body, .container {
+html, body , .container {
     height: 100%;
     margin: 0;
 }
@@ -65,5 +46,10 @@ li {
     padding: 10px;
     border-style: solid;
     border-width: 5px;
-    border-color: rgb(210, 210, 210);
+    border-color: rgb(220, 220, 220);
+    background-color: rgb(205, 204, 186);
+}
+
+p, h1, h2 {
+    color: white;
 }

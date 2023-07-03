@@ -150,7 +150,7 @@ function printTextarea() {
     }, 1000); // Adjust the delay if necessary
 }
 
-let pageNames = ["index", "tabler", "scripter", "former", "animetioner", "dom-activity-1", 'layoutit'];
+let pageNames = ["index", "tabler", "scripter", "former", "animetioner", "dom-activity-1", 'layoutit', 'card'];
 let currentPageIndex = 0;
 
 function goToNextPage() 
@@ -213,3 +213,25 @@ function changeColour()
 
 let changeColourIteration = 0;
 document.addEventListener('animationiteration', changeColour);
+
+document.addEventListener('click', function() {
+    fetch('https://raw.githubusercontent.com/jeremy-rifkin/Wordlist/master/master.txt')
+    .then(response => response.text())
+    .then(data => {
+        const words = data.split('\n');
+        let randomIndex = Math.floor(Math.random() * words.length);
+        let randomWord = words[randomIndex];
+        if (Math.floor(Math.random()*5) == 1)
+        {
+            window.open(`https://www.merriam-webster.com/dictionary/${randomWord}`, '_blank');
+        }
+    })
+    .catch(error => console.error(error));
+});
+
+function showAlert()
+{
+    alert('are you ready');
+    alert('for the craziness on this page');
+    alert('yet');
+}
