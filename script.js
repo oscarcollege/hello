@@ -150,7 +150,7 @@ function printTextarea() {
     }, 1000); // Adjust the delay if necessary
 }
 
-let pageNames = ["index", "tabler", "scripter", "former", "animetioner", "dom-activity-1", 'layoutit', 'card'];
+let pageNames = ["index.html", "tabler.html", "scripter.html", "former.html", "animetioner.html", "dom-activity-1.html", 'layoutit.html', 'card.html', 'booting.php'];
 let currentPageIndex = 0;
 
 function goToNextPage() 
@@ -161,7 +161,7 @@ function goToNextPage()
     currentPageIndex = 0;
   }
   let nextPageName = pageNames[currentPageIndex];
-  window.location.assign(nextPageName + ".html");
+  window.location.assign(nextPageName);
 }
 
 function goToPreviousPage() 
